@@ -27,7 +27,7 @@ env:
   REGION_ID: cn-chengdu
   REGISTRY: registry.cn-chengdu.aliyuncs.com
   NAMESPACE: stevenfeng-prod
-  IMAGE: my-next
+  IMAGE: card
   TAG: latest
 
 permissions:
