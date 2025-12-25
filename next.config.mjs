@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: '/new-year-2026',
+  assetPrefix: '/new-year-2026',
   typescript: {
     ignoreBuildErrors: true,
   },
