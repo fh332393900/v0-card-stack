@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/new-year-2026',
-  assetPrefix: '/new-year-2026',
+  basePath: process.env.NODE_ENV === 'production' ? '/new-year-2026' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/new-year-2026' : '',
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
   },
- 
+
   eslint: {
     ignoreDuringBuilds: true,
   },
