@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Card, type CardData } from "./Card";
 import { Button } from "../ui/button";
 import { Sparkles } from "lucide-react";
-import dog2 from "@/assets/dog2.gif";
+import dog2 from "@/assets/img/dog2.gif";
 
 interface CardStackProps {
   cards: CardData[];

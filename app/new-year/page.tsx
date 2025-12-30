@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
 import { useRouter } from "next/navigation"
-import dog3 from "@/assets/dog3.gif";
+import dog3 from "@/assets/img/dog3.gif";
 
 export default function NewYear() {
   // const [_, setLocation] = useLocation();
