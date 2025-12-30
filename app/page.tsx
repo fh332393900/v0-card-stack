@@ -9,44 +9,172 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation"
-// import card1 from "../../assets/card-1.jpg";
-// import card2 from "../../assets/card-1.jpg";
-// import card3 from "../../assets/card-1.jpg";
-// import card4 from "../../assets/card-1.jpg";
+import dog1 from "@/assets/dog1.gif";
+
+import img1 from "@/assets/img1.jpg";
+import img21 from "@/assets/img2-1.jpg";
+import img2 from "@/assets/img2.jpg";
+import img3 from "@/assets/img3.jpg";
+import img4 from "@/assets/img4.jpg";
+import img5 from "@/assets/img5.jpg";
+import img6 from "@/assets/img6.jpg";
+import img7 from "@/assets/img7.jpg";
+import img8 from "@/assets/img8.jpg";
+import img9 from "@/assets/img9.jpg";
+import img10 from "@/assets/img10.jpg";
+import img11 from "@/assets/img11.jpg";
+import img12 from "@/assets/img12.jpg";
+import img13 from "@/assets/img13.jpg";
+import img14 from "@/assets/img14.jpg";
+import img15 from "@/assets/img15.jpg";
+import img16 from "@/assets/img16.jpg";
+import img17 from "@/assets/img17.jpg";
 
 // Mock Data
 const CARDS_DATA = [
   {
     id: 1,
-    date: "2025.03.15",
-    location: "Spring Garden",
-    image: '/card-1.jpg',
-    description: "万物复苏，在这个春天埋下了希望的种子。",
+    date: "2025.01.19",
+    location: "臭猪的家里",
+    image: img1.src,
+    description: "小晶宝宝给我在拼乐高的车车，乖乖的",
     color: "oklch(0.65 0.2 30)", // Coral
   },
   {
     id: 2,
-    date: "2025.07.20",
-    location: "Sunny Beach",
-    image: '/card-1.jpg',
-    description: "热烈的夏日，海风与冰淇淋不仅是味觉的享受，更是自由的味道。",
+    date: "2025.02.21",
+    location: "臭猪的家里",
+    image: img21.src,
+    description: "开始学习！要努力成为中级宝宝",
     color: "oklch(0.6 0.15 250)", // Teal
   },
   {
     id: 3,
-    date: "2025.10.05",
-    location: "Cozy Nook",
-    image: '/card-1.jpg',
-    description: "秋日的午后，一杯热可可，一本好书，享受内心的宁静。",
-    color: "oklch(0.6 0.118 184)", // Greenish
+    date: "2025.02.27",
+    location: "建设路的烤匠",
+    image: img2.src,
+    description: "宝宝的生日，正在许愿！",
+    color: "oklch(0.6 0.15 250)", // Teal
   },
   {
     id: 4,
-    date: "2025.12.31",
-    location: "Starry Night",
-    image: '/card-1.jpg',
-    description: "在烟花绽放的瞬间，许下对未来的期许。",
+    date: "2025.03.22",
+    location: "铁像寺水街",
+    image: img3.src,
+    description: "我们的一周年，我们一起吃了西餐，臭猪把这个塑料的猪猪吃了一口发现袄不动！憨猪样",
+    color: "oklch(0.6 0.118 184)", // Greenish
+  },
+  {
+    id: 5,
+    date: "2025.03.21",
+    location: "臭猪的家里",
+    image: img4.src,
+    description: "送给你一个大大的粉色颜色花",
     color: "oklch(0.85 0.18 85)", // Gold
+  },
+  {
+    id: 6,
+    date: "2025.05.03",
+    location: "臭猪的家里",
+    image: img5.src,
+    description: "夏天的第一顿小龙虾，小晶宝宝最爱吃啦",
+    color: "oklch(0.65 0.2 30)", // Coral
+  },
+  {
+    id: 7,
+    date: "2025.05.01",
+    location: "臭猪的家里",
+    image: img6.src,
+    description: "臭冯航把灶台都煮炸了，以后可得小心！！！",
+    color: "oklch(0.85 0.18 85)", // Gold
+  },
+  {
+    id: 8,
+    date: "2025.05.09",
+    location: "臭猪的家里",
+    image: img7.src,
+    description: "小晶宝宝在拯救小熊猫的眉毛",
+    color: "oklch(0.6 0.118 184)", // Greenish
+  },
+  {
+    id: 9,
+    date: "2025.07.11",
+    location: "西安奥体中心",
+    image: img8.src,
+    description: "陪宝宝看了她心心念念鹿哥的演唱会，我是鹿角猪啦！",
+    color: "oklch(0.6 0.15 250)", // Teal
+  },
+  {
+    id: 10,
+    date: "2025.07.11",
+    location: "西安某个酒店",
+    image: img9.src,
+    description: "一秒800个动作，乖乖晶",
+    color: "oklch(0.6 0.15 250)", // Teal
+  },
+  {
+    id: 11,
+    date: "2025.07.12",
+    location: "西安某个按摩的地方",
+    image: img10.src,
+    description: "搞笑揪带我去按摩了，哈哈哈，小揪的样子又搞笑，又乖乖的",
+    color: "oklch(0.6 0.118 184)", // Greenish
+  },
+  {
+    id: 12,
+    date: "2025.10.04",
+    location: "青岛第二海水浴场",
+    image: img11.src,
+    description: "我们去了青岛，差点没赶上飞机，🏃‍♂️🏃‍♀️狂奔ing！",
+    color: "oklch(0.85 0.18 85)", // Gold
+  },
+  {
+    id: 13,
+    date: "2025.10.04",
+    location: "青岛五四广场前海沿",
+    image: img12.src,
+    description: "我们吃了第一顿海鲜大餐，好好吃！",
+    color: "oklch(0.65 0.2 30)", // Coral
+  },
+  {
+    id: 14,
+    date: "2025.10.07",
+    location: "石老人海水浴场",
+    image: img13.src,
+    description: "和宝宝一起看了日出",
+    color: "oklch(0.6 0.15 250)", // Teal
+  },
+  {
+    id: 15,
+    date: "2025.10.25",
+    location: "广汉三星堆",
+    image: img14.src,
+    description: "去了三星堆，看到了一只猪，哈哈哈哈！",
+    color: "oklch(0.85 0.18 85)", // Gold
+  },
+  {
+    id: 16,
+    date: "2025.11.14",
+    location: "臭猪的家里",
+    image: img15.src,
+    description: "臭冯航求婚啦！宝宝我爱你，我要和你结纷！",
+    color: "oklch(0.6 0.118 184)", // Greenish
+  },
+  {
+    id: 17,
+    date: "2025.11.15",
+    location: "臭猪的家里",
+    image: img16.src,
+    description: "宝宝穿乖睡衣的样子，乖乖哒",
+    color: "oklch(0.65 0.2 30)", // Coral
+  },
+  {
+    id: 18,
+    date: "2025.10.07",
+    location: "建设路的烤匠",
+    image: img17.src,
+    description: "和宝宝在一起过了平安夜，我们又吃了烤匠，哼臭冯航把宝宝惹生气了，小晶气呼呼的在拆蛋糕哈哈",
+    color: "oklch(0.6 0.15 250)", // Teal
   },
 ];
 
@@ -61,7 +189,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-background overflow-hidden flex flex-col items-center justify-center font-cartoon">
+    <div className="relative min-h-screen w-full bg-background overflow-hidden flex flex-col items-center pt-0 font-cartoon">
       {/* Decorative Background Elements */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/5 rounded-full blur-[100px]" />
@@ -76,19 +204,22 @@ export default function Home() {
             className="z-20 flex flex-col items-center text-center space-y-8 p-8"
           >
             <div className="space-y-4">
-               <motion.div 
-                 animate={{ scale: [1, 1.05, 1] }}
-                 transition={{ repeat: Infinity, duration: 3 }}
-                 className="text-6xl mb-4"
-               >
-                 🕰️
-               </motion.div>
-               <h1 className="text-5xl font-cartoon text-primary drop-shadow-sm">
-                 跨年时光机
-               </h1>
-               <p className="text-xl text-muted-foreground font-cartoon">
-                 回顾 2025 · 启程 2026
-               </p>
+              <div className="flex justify-center">
+                <img src={dog1.src} className="w-36 h-36" />
+              </div>
+              <motion.div 
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ repeat: Infinity, duration: 3 }}
+                className="text-6xl mb-4"
+              >
+                🕰️
+              </motion.div>
+              <h1 className="text-5xl font-cartoon text-primary drop-shadow-sm">
+                跨年时光机
+              </h1>
+              <p className="text-xl text-muted-foreground font-cartoon">
+                回顾 2025 · 启程 2026
+              </p>
             </div>
             
             <Button 
@@ -111,7 +242,7 @@ export default function Home() {
             {/* Header / Logo - Compact spacing */}
             <header className="relative mt-4 mb-2 z-10">
               <h1 className="text-lg font-cartoon text-foreground/60 tracking-widest uppercase">
-                Time Capsule 2025
+                时间胶囊 2025
               </h1>
             </header>
 
@@ -122,20 +253,6 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Footer Hint (only show when started) */}
-      {started && (
-        <motion.footer 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-6 text-center"
-        >
-          <p className="text-sm text-muted-foreground font-cartoon opacity-60">
-            上滑翻阅回忆
-          </p>
-        </motion.footer>
-      )}
     </div>
   );
 }

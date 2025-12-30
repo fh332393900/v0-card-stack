@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { RotateCcw } from "lucide-react";
 import { useRouter } from "next/navigation"
+import dog3 from "@/assets/dog3.gif";
 
 export default function NewYear() {
   // const [_, setLocation] = useLocation();
@@ -314,8 +315,14 @@ export default function NewYear() {
         <p className="text-2xl md:text-3xl font-body text-[#FFD93D] tracking-widest uppercase font-bold drop-shadow-md">
           Happy New Year
         </p>
-        
-        <div className="pt-16">
+        <p className="text-xl md:text-2xl text-[#FFD93D] font-cartoon tracking-widest uppercase drop-shadow-md">
+          亲爱的宝宝，2026新年快乐！希望我们可以一直开开心心，健康快乐！我们可以更爱对方，互相理解。我很期待明年我们的婚礼！宝宝我爱你！
+          —臭猪
+        </p>
+        <div className="text-center flex justify-center">
+          <img src={dog3.src} className="w-32 h-32 rounded-md" />
+        </div>
+        <div className="pt-12">
            <Button 
              variant="outline" 
              size="icon"
@@ -324,7 +331,7 @@ export default function NewYear() {
            >
              <RotateCcw className="h-8 w-8" />
            </Button>
-           <p className="text-sm text-white/50 mt-3 font-body">Restart</p>
+           <p className="text-sm mt-3 font-cartoon text-[#FFD93D]">重新回顾</p>
         </div>
       </div>
     </div>

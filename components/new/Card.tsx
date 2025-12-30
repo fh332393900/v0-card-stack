@@ -64,7 +64,7 @@ export function Card({ data, index, total, onSwipe, isFront }: CardProps) {
       className={cn(
         "absolute w-full max-w-sm aspect-[3/5] rounded-[2rem] bg-card p-4 flex flex-col items-center shadow-xl border-4 select-none touch-none",
         "origin-bottom transition-shadow duration-300",
-        isFront ? "cursor-grab active:cursor-grabbing card-shadow ring-4 ring-primary/10" : "pointer-events-none opacity-60"
+        isFront ? "cursor-grab active:cursor-grabbing card-shadow ring-4 ring-primary/10" : "pointer-events-none opacity-90"
       )}
 
     >
@@ -98,12 +98,15 @@ export function Card({ data, index, total, onSwipe, isFront }: CardProps) {
       {/* Interaction Hint (Only for front card) */}
       {isFront && (
         <motion.div 
-          className="absolute bottom-6 flex flex-col items-center text-muted-foreground/50 gap-1"
+          className="absolute bottom-4 flex flex-col items-center text-muted-foreground/50 gap-1"
           animate={{ y: [0, -10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         >
-          <MoveUp size={24} />
-          <span className="text-xs font-bold tracking-widest uppercase">Swipe Up</span>
+          <MoveUp size={24} color="#61728f" />
+          {/* <span className="text-xs font-bold tracking-widest uppercase">Swipe Up</span> */}
+          <p className="text-sm text-muted-foreground font-cartoon opacity-60">
+            上滑翻阅回忆
+          </p>
         </motion.div>
       )}
     </motion.div>

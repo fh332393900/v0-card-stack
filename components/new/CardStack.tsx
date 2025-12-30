@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Card, type CardData } from "./Card";
 import { Button } from "../ui/button";
 import { Sparkles } from "lucide-react";
+import dog2 from "@/assets/dog2.gif";
 
 interface CardStackProps {
   cards: CardData[];
@@ -58,18 +59,21 @@ export function CardStack({ cards, onFinish }: CardStackProps) {
              animate={{ scale: 1, opacity: 1 }}
              className="z-10 flex flex-col items-center justify-center"
            >
-             <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+             <div className="relative group text-center">
+                {/* <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div> */}
+                <div className="mb-3">
+                  <img src={dog2.src} alt="线条小狗冲浪动图" className="rounded-md" />
+                </div>
                 <Button 
                   size="lg" 
-                  className="relative h-16 px-8 text-xl font-display rounded-full bg-background text-foreground border-2 border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all shadow-2xl"
+                  className="relative h-16 px-8 text-xl rounded-full bg-background text-foreground border-2 border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all shadow-2xl"
                   onClick={onFinish}
                 >
                   <Sparkles className="mr-2 h-6 w-6 text-secondary animate-pulse" />
                   开启 2026 新年
                 </Button>
              </div>
-             <p className="mt-4 text-muted-foreground font-body text-sm">
+             <p className="mt-4 text-muted-foreground text-sm">
                准备好了吗？
              </p>
            </motion.div>

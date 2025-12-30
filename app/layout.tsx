@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: '跨年时光机',
+  description: '跨年时光机；2026新年快乐',
   generator: 'v0.app',
   icons: {
     icon: '/icon.svg',
